@@ -3,8 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - master
-      - develop
+      - "**"
     tags:
       - "**"
   pull_request:
@@ -85,15 +84,6 @@ jobs:
           else
             echo "::set-output name=destination_dir::integration"
           fi
-
-      - name: Deploy to Github Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./composite
-          destination_dir: ${{ steps.get-destination-dir.outputs.destination_dir }}
-          cname: eclipse.dl.platformio.org
-          keep_files: true
 
       - name: Delete Artifact
         uses: geekyeggo/delete-artifact@v1
