@@ -27,7 +27,7 @@
 		<property name='p2.timestamp' value='1243822502499' />
 	</properties>
 	<children size='2'>
-		<child location='http://a9813dd008ff.ngrok.io/chromium-cef/rls/repository' />
+		<child location='http://03de7d2bb531.ngrok.io/chromium-cef/rls/repository' />
 		<child location='repository' />
 	</children>
 </repository>
